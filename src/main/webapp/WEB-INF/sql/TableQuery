@@ -1,0 +1,32 @@
+drop table mvcboard;
+CREATE TABLE mvcboard (
+    idx INT PRIMARY KEY AUTO_INCREMENT,
+    name VARCHAR(50) NOT NULL,
+    title VARCHAR(200) NOT NULL,
+    content VARCHAR(2000) NOT NULL,
+    postdate DATE DEFAULT CURRENT_TIMESTAMP NOT NULL,
+    ofile VARCHAR(200),
+    sfile VARCHAR(200),
+    downcount INT DEFAULT 0 NOT NULL,
+    pass VARCHAR(200) NOT NULL,
+    visitcount INT DEFAULT 0 NOT NULL
+);
+drop table myfile;
+
+
+
+create table myfile (
+    idx int primary key AUTO_INCREMENT,
+    title varchar(200) not null,
+    cate varchar(100),
+    ofile varchar(200) not null,
+    sfile varchar(200) not null,
+    postdate date default CURRENT_TIMESTAMP not null
+);
+
+insert into mvcboard (name, title, content, pass)
+	values('최경락', '안녕하세요', '반갑습니다', '1234');
+    insert into mvcboard (name, title, content, pass)
+	values('김유신', '바다다', '내용', '1234');
+
+	
